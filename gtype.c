@@ -96,7 +96,9 @@ void gtype(int string_cnt)
 	printf("Speed : %.2f wpm\n",score);
 	printf("Miss : %d\n",misscnt);
 	printf("Correct answer rate : %.1f%%\n",100-(double)misscnt/(misscnt+size_of_str)*100);
-	printf("Score : %d\n",(int)(score*8-((double)misscnt/size_of_str)*300*misscnt));
+	int score2=(int)(score*8-((double)misscnt/size_of_str)*300*misscnt);
+	score2<0?score2=0:score2;
+	printf("Score : %d\n",score2);
 	printf("--------------------------------\n");
 	return;
 }
