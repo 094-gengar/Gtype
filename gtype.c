@@ -74,7 +74,8 @@ void gtype(int string_cnt)
 	shuffle(strarr,array_size);
 	int size_of_str=0;
 	int misscnt=0;
-
+	puts("");
+	
 	long long total_sec=0;
 	for(int i=0;i<string_cnt;i++)
 	{
