@@ -70,7 +70,7 @@ void gtype(int string_cnt)
 	printf("--------------------------------------\n");
 	printf("--------------------------------------\n");
 	printf("push space key to start... \n");
-	for(char c;(c=getch())!=32;)putchar(c);
+	for(char c;(c=_getch())!=32;)putchar(c);
 	shuffle(strarr,array_size);
 	int size_of_str=0;
 	int misscnt=0;
@@ -82,7 +82,7 @@ void gtype(int string_cnt)
 		long t1=clock();
 		for(int j=0;j<strlen(strarr[i]);j++)
 		{
-			for(char c;c=getch(),size_of_str++,c==strarr[i][j]&&putchar(c),c!=strarr[i][j]&&misscnt++;);
+			for(char c;c=_getch(),size_of_str++,c==strarr[i][j]&&putchar(c),c!=strarr[i][j]&&misscnt++;);
 		}
 		long t2=clock();
 		total_sec+=t2-t1;
